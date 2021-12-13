@@ -1,0 +1,267 @@
+:root {
+    --Grey: #EBECF0;
+    --DarkGrey: #6B7475;
+    --KhorneRed: #6a0001;
+    --GreyGreen: #406269;
+    --Jet: #323031;
+    --Onyx: #39393A;
+    --MiddleRedPurple: #A84D4D;
+    --SpanishGrey: #9B9B93;
+    --Cinerous: #A39191;
+    --SilverPink: #D9B6B6; 
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--Onyx);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 120px;
+    background-color: var(--MiddleRedPurple);
+    top: 0;
+    border-bottom: 3px solid var(--Grey);
+}
+
+#logo-div {
+    width: 50%;
+    height: 55%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+header div img {
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--Jet);
+    text-align: center;
+    font-weight: 800;
+    padding: 10px;
+}
+
+
+/* Unit Selector Div */
+
+#unit-selector-div {
+    margin: 30px auto;
+    background-color: var(--Grey);
+    width: 70%;
+    border-radius: 10px;
+    border: 2px solid var(--MiddleRedPurple);
+}
+
+#unit-selector-div h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Jura', sans-serif;
+}
+
+#unit-selector-div ul {
+    text-align: center;
+    list-style: none;
+    font-size: 26px;
+    font-family: 'Jura', sans-serif;
+    margin-bottom: 15px;
+}
+
+#unit-selector-div ul li ul {
+    font-size: 18px;
+}
+
+#unit-selector-div ul li ul li {
+    padding: 5px;
+}
+
+.add-button {
+    width: 18px;
+    height: 20px;
+    cursor: pointer;
+    border: 1px solid var(--MiddleRedPurple);
+    border-radius: 30px;
+    padding-top: 4px;
+    margin-bottom: 10px;
+}
+
+.add-button img {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 3px;
+}
+
+.minimize-button {
+    width: 18px;
+    height: 20px;
+    cursor: pointer;
+    border: 1px solid var(--MiddleRedPurple);
+    border-radius: 30px;
+    padding-top: 4px;
+    margin-bottom: 10px;
+}
+
+.minimize-button img {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 3px;
+}
+
+.add-unit-button {
+    margin-left: 5px;
+    width: 35px;
+    border: 1px solid var(--MiddleRedPurple);
+}
+
+
+/* Army List Div */
+
+#army-list-div {
+    margin: 30px auto;
+    background-color: var(--Grey);
+    width: 70%;
+    border-radius: 10px;
+    border: 2px solid var(--MiddleRedPurple);
+}
+
+#army-list-div h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Jura', sans-serif;
+}
+
+#army-list-div ul {
+    text-align: center;
+    list-style: none;
+    font-size: 26px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Army List Unit Type Lists */
+
+.army-list-type li {
+    font-size: 18px;
+    font-family: 'Jura', sans-serif;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.display-wargear-button {
+    width: 16px;
+    height: 18px;
+    text-align: center;
+    margin-left: 4px;
+}
+
+.delete-unit-button {
+    width: 16px;
+    height: 18px;
+    text-align: center;
+    margin-left: 4px;
+}
+
+.unit-wargear {
+    margin-top: 5px;
+}
+
+.wargear-item {
+    margin-top: 1px !important;
+}
+
+/* Wargear List Div */
+
+#wargear-list-div {
+    width: 85%;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 2px solid var(--MiddleRedPurple);
+    text-align: center;   
+}
+
+#wargear-list-div h3 {
+    text-align: center;
+    padding: 10px;
+    font-size: 26px;
+    font-family: 'Jura', sans-serif;
+}
+
+#wargear-list-div button {
+    border-radius: 2px;
+    border: 2px solid var(--Jet);
+    width: 60px;
+    cursor: pointer;   
+}
+
+#wargear-menu li {
+    font-family: 'Jura', sans-serif;
+    font-size: 18px;
+    padding: 3px;
+}
+
+.add-wargear-item {
+    width: 16px !important;
+    height: 18px;
+    border: 1px solid black !important;
+    margin-left: 3px;
+}
+
+.add-unit-button {
+    cursor: pointer;
+}
+
+/* Print Button */
+#print-button {
+    display: flex;
+    border: 2px solid var(--MiddleRedPurple);
+    float: right;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 25px;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#points-div {
+    margin: 0 auto;
+    width: 150px;
+    font-family: 'Jura', sans-serif;
+}
+
+#points-div input {
+    border: none;
+    background-color: white;  
+    width: 70px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px auto 0 auto;
+}
+
+#points-div span {
+    font-size: 18px;
+}

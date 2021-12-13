@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Orbitron&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Warhammer 40k Army List Builder</h1>
+        <div id="logo-div">
+            <img src="images/Warhammer40kLogo.png" alt="">
+        </div>
+    </header>
+
+    <div id="unit-selector-div">
+        <h2>Unit Selector</h2>
+        <br>
+        <ul>
+            <li>HQ 
+                <button class="add-button" id="add-HQ-button" onclick="populateUnitList"><img src="images/plus-sign.png" alt="plus sign"></button>
+
+                <button class="minimize-button" id="minimize-HQ" onclick="minimizeMenu"><img src="images/minus-sign.png" alt="negative sign"></button>
+
+                <ul class="unit-type-list" id="HQ-unit-list"></ul>
+            </li>
+
+            <li>Troops 
+                <button class="add-button" id="add-troops-button" onclick="populateUnitList"><img src="images/plus-sign.png" alt="plus sign"></button>
+
+                <button class="minimize-button" id="minimize-troops" onclick="minimizeMenu"><img src="images/minus-sign.png" alt="negative sign"></button>
+
+                <ul class="unit-type-list" id="troops-unit-list"></ul>
+            </li>
+
+            <li>Elites 
+                <button class="add-button" id="add-elites-button" onclick="populateUnitList"><img src="images/plus-sign.png" alt="plus sign"></button>
+
+                <button class="minimize-button" id="minimize-elites" onclick="minimizeMenu"><img src="images/minus-sign.png" alt="negative sign"></button>
+
+                <ul class="unit-type-list" id="elites-unit-list"></ul>
+            </li>
+
+            <li>Fast Attack 
+                <button class="add-button" id="add-fastAttack-button" onclick="populateUnitList"><img src="images/plus-sign.png" alt="plus sign"></button>
+
+                <button class="minimize-button" id="minimize-fastAttack" onclick="minimizeMenu"><img src="images/minus-sign.png" alt="negative sign"></button>
+
+                <ul class="unit-type-list" id="fastAttack-unit-list"></ul>
+            </li>
+
+            <li>Heavy Support 
+                <button class="add-button" id="add-heavySupport-button" onclick="populateUnitList"><img src="images/plus-sign.png" alt="plus sign"></button>
+
+                <button class="minimize-button" id="minimize-heavySupport" onclick="minimizeMenu"><img src="images/minus-sign.png" alt="negative sign"></button>
+
+                <ul class="unit-type-list" id="heavySupport-unit-list"></ul>
+            </li>
+
+            <li>Flyer 
+                <button class="add-button" id="add-flyer-button" onclick="populateUnitList"><img src="images/plus-sign.png" alt="plus sign"></button>
+
+                <button class="minimize-button" id="minimize-flyer" onclick="minimizeMenu"><img src="images/minus-sign.png" alt="negative sign"></button>
+
+                <ul class="unit-type-list" id="flyer-unit-list"></ul>
+            </li>
+
+            <li>Lord of War 
+                <button class="add-button" id="add-lordOfWar-button" onclick="populateUnitList"><img src="images/plus-sign.png" alt="plus sign"></button>
+
+                <button class="minimize-button" id="minimize-lordOfWar" onclick="minimizeMenu"><img src="images/minus-sign.png" alt="negative sign"></button>
+
+                <ul class="unit-type-list" id="lordOfWar-unit-list"></ul>
+            </li>
+
+            <li>Dedicated Transport 
+                <button class="add-button" id="add-dedicatedTransport-button" onclick="populateUnitList"><img src="images/plus-sign.png" alt="plus sign"></button>
+
+                <button class="minimize-button" id="minimize-dedicatedTransport" onclick="minimizeMenu"><img src="images/minus-sign.png" alt="negative sign"></button>
+
+                <ul class="unit-type-list" id="dedicatedTransport-unit-list"></ul>
+            </li>
+
+            <li>Other 
+                <button class="add-button" id="add-other-button" onclick="populateUnitList"><img src="images/plus-sign.png" alt="plus sign"></button>
+
+                <button class="minimize-button" id="minimize-other" onclick="minimizeMenu"><img src="images/minus-sign.png" alt="negative sign"></button>
+
+                <ul class="unit-type-list" id="other-unit-list"></ul>
+            </li>
+
+        </ul>
+        <br>
+    </div>
+
+    <div id="army-list-div">
+        <h2>Army List</h2>
+        <br>
+        <br>
+            <button id="print-button" onclick="window.print();">Print</button>
+            <br><br>
+            
+            <div id="points-div">
+                <input id="total-pl" type="number" value="0"><span> <b>PL</b></span>
+                <br>
+                <input id="total-points" type="number" value="0"><span> <b>Points</b></span>
+            </div><br>
+
+        <div id="wargear-list-div">
+            <h3>Wargear Options</h3>
+            <br>
+            <button id="clear-button" type="button">Clear</button>
+            <br><br>
+            <ul id="wargear-menu"></ul>
+            <br>
+        </div>
+        <ul>
+            <li>HQ
+                <br>
+                <ul class="army-list-type" id="army-list-HQ">
+                </ul>
+            </li>
+            <br>
+
+            <li>Troops
+                <br>
+                <ul class="army-list-type" id="army-list-troops">
+                </ul>
+            </li>
+            <br>
+
+            <li>Elites
+                <br>
+                <ul class="army-list-type" id="army-list-elites">
+                </ul>
+            </li>
+            <br>
+
+            <li>Fast Attack
+                <br>
+                <ul class="army-list-type" id="army-list-fastAttack">
+                </ul>
+            </li>
+            <br>
+
+            <li>Heavy Support
+                <br>
+                <ul class="army-list-type" id="army-list-heavySupport">
+                </ul>
+            </li>
+            <br>
+
+            <li>Flyers
+                <br>
+                <ul class="army-list-type" id="army-list-flyers">
+                </ul>
+            </li>
+            <br>
+
+            <li>Lord of War
+                <br>
+                <ul class="army-list-type" id="army-list-lordOfWar">
+                </ul>
+            </li>
+            <br>
+
+            <li>Dedicated Transport
+                <br>
+                <ul class="army-list-type" id="army-list-dedicatedTransport">
+                </ul>
+            </li>
+            <br>
+
+            <li>Other
+                <br>
+                <ul class="army-list-type" id="army-list-other">
+                </ul>
+            </li>
+            <br>
+        </ul>
+    </div>
+
+    <script src="dom.js"></script>
+</body>
+</html>
